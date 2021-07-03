@@ -4,16 +4,29 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link rel="stylesheet" href="css/project.min.css">
-	<script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script>
 	<script src="libs/jquery-3.2.1.min.js"></script>
 	<script src="libs/jquery.bxslider.min.js"></script>
 	<script src="libs/jquery.maskedinput.min.js"></script>
 	<script src="libs/is.mobile.js"></script>
 	<script src="libs/jquery.form.js"></script>
-	<script src="libs/jquery.validate.js"></script>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" async>
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(82446148, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/82446148" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
 </head>
 <body>
-<form class="portable-test-wrapper contact-form" id="contactForm" method="POST" novalidate="novalidate">
+<form class="portable-test-wrapper contact-form" id="contactForm" method="POST">
 	<!-- LOGO + TITLE START -->
 	<div class="header-line">
 		<div class="container">
@@ -92,7 +105,7 @@
 						<div class="pick-item__img">
 							<img src="img/s1-1.jpg" alt="item">
 						</div>
-						<input class="pick-item__input" type="radio" name="step1" id="step1-1" value="Дом">
+						<input class="pick-item__input" type="radio" name="Куда" id="step1-1" value="Дом">
 						<div class="pick-item__label">Дом</div>
 					</label>
 					<!-- ONE-ITEM END -->
@@ -102,7 +115,7 @@
 						<div class="pick-item__img">
 							<img src="img/s1-2.jpg" alt="item">
 						</div>
-						<input class="pick-item__input" type="radio" name="step1" id="step1-2" value="Квартира">
+						<input class="pick-item__input" type="radio" name="Куда" id="step1-2" value="Квартира">
 						<div class="pick-item__label">Квартира</div>
 					</label>
 					<!-- ONE-ITEM END -->
@@ -112,7 +125,7 @@
 						<div class="pick-item__img">
 							<img src="img/s1-3.jpg" alt="item">
 						</div>
-						<input class="pick-item__input" type="radio" name="step1" id="step1-3" value="Офис/Коммерция">
+						<input class="pick-item__input" type="radio" name="Куда" id="step1-3" value="Офис/Коммерция">
 						<div class="pick-item__label">Офис/Коммерция</div>
 					</label>
 					<!-- ONE-ITEM END -->
@@ -138,14 +151,14 @@
 				<div class="step-slide__grid">
 					<!-- ONE-ITEM START -->
 					<label for="step2-1" class="pick-item">
-						<input class="pick-item__input" type="radio" name="step2" id="step2-1" value="В городе">
+						<input class="pick-item__input" type="radio" name="Находится" id="step2-1" value="В городе">
 						<div class="pick-item__label">В городе</div>
 					</label>
 					<!-- ONE-ITEM END -->
 
 					<!-- ONE-ITEM START -->
 					<label for="step2-2" class="pick-item">
-						<input class="pick-item__input" type="radio" name="step2" id="step2-2" value="За городом">
+						<input class="pick-item__input" type="radio" name="Находится" id="step2-2" value="За городом">
 						<div class="pick-item__label">За городом</div>
 					</label>
 					<!-- ONE-ITEM END -->
@@ -167,7 +180,7 @@
 						<div class="pick-item__img">
 							<img src="img/s3-1.jpg" alt="item">
 						</div>
-						<input class="pick-item__input" type="radio" name="step3" id="step3-1" value="Ламинированные под дерево">
+						<input class="pick-item__input" type="radio" name="Цвет" id="step3-1" value="Ламинированные под дерево">
 						<div class="pick-item__label">Ламинированные под дерево</div>
 					</label>
 					<!-- ONE-ITEM END -->
@@ -177,7 +190,7 @@
 						<div class="pick-item__img">
 							<img src="img/s3-2.jpg" alt="item">
 						</div>
-						<input class="pick-item__input" type="radio" name="step3" id="step3-2" value="Белые">
+						<input class="pick-item__input" type="radio" name="Цвет" id="step3-2" value="Белые">
 						<div class="pick-item__label">Белые</div>
 					</label>
 					<!-- ONE-ITEM END -->
@@ -196,7 +209,7 @@
 				</h3>
 				<div class="step-slide__grid">
 					<!-- ONE-ITEM START -->
-					<input class="pick-item__digit" type="tel" name="step4">
+					<input class="pick-item__digit" type="tel" name="Количество окон">
 					<!-- ONE-ITEM END -->
 
 					<div id="next4" class="btn-next-container"><a class="bx-next" href=""><div class="btn-next"><span>на следующий шаг</span></div></a></div>
@@ -208,34 +221,35 @@
 
 			<!-- ONE-STEP START -->
 			<div class="step-slide">
-				<h3 class="step-slide__title"><div class="step-slide__title-counter">5</div>
+				<h3 class="step-slide__title" style="margin-bottom: 0"><div class="step-slide__title-counter">5</div>
 					Какие дополнительные опции нужны?
 				</h3>
+				<p class="step-slide__sub">(можно выбрать несколько)</p>
 				<div class="step-slide__grid">
 					<!-- ONE-ITEM START -->
 					<label for="step5-1" class="pick-item">
-						<input class="pick-item__input" type="checkbox" name="step5[]" id="step5-1" value="Москитные сетки">
+						<input class="pick-item__input" type="checkbox" name="Дополнительные опции" id="step5-1" value="Москитные сетки">
 						<div class="pick-item__label">Москитные сетки</div>
 					</label>
 					<!-- ONE-ITEM END -->
 
 					<!-- ONE-ITEM START -->
 					<label for="step5-2" class="pick-item">
-						<input class="pick-item__input" type="checkbox" name="step5[]" id="step5-2" value="Подоконники">
+						<input class="pick-item__input" type="checkbox" name="Дополнительные опции" id="step5-2" value="Подоконники">
 						<div class="pick-item__label">Подоконники</div>
 					</label>
 					<!-- ONE-ITEM END -->
 
 					<!-- ONE-ITEM START -->
 					<label for="step5-3" class="pick-item">
-						<input class="pick-item__input" type="checkbox" name="step5[]" id="step5-3" value="Сложные открывания">
+						<input class="pick-item__input" type="checkbox" name="Дополнительные опции" id="step5-3" value="Сложные открывания">
 						<div class="pick-item__label">Сложные открывания</div>
 					</label>
 					<!-- ONE-ITEM END -->
 
 					<!-- ONE-ITEM START -->
 					<label for="step5-4" class="pick-item">
-						<input class="pick-item__input" type="checkbox" name="step5[]" id="step5-4" value="Демонтаж старых окон">
+						<input class="pick-item__input" type="checkbox" name="Дополнительные опции" id="step5-4" value="Демонтаж старых окон">
 						<div class="pick-item__label">Демонтаж старых окон</div>
 					</label>
 					<!-- ONE-ITEM END -->
@@ -255,12 +269,18 @@
 					<h4 class="step-slide__discount">+ гарантированная скидка в 15%</h4>
 					<div class="last-step-form">
 						<label class="last-step-form__label">Введите номер телефона, наш менеджер озвучит примерную сумму заказа.</label>
-						<input class="last-step-form__input contact-form__input_name" type="text" name="name" placeholder="Введите Ваше имя">
-						<input class="last-step-form__input contact-form__input_tel" type="tel" name="tel" placeholder="Введите Ваш номер">
-						<button class="last-step-form__button btn-shine contact-form__button" type="submit" onclick="yaCounter47313057.reachGoal('GOOD'); return true;">
+						<input class="last-step-form__input contact-form__input_name" type="text" name="Имя" placeholder="Введите Ваше имя" required="required">
+						<input class="last-step-form__input contact-form__input_tel" type="tel" name="Телефон" placeholder="Введите Ваш номер" required="required">
+						<div class="contact-form__preloader"></div>
+						<fieldset class="contact-form__input-wrapper contact-form__input-wrapper_hidden">
+							<label for="honeypot">Помогает бороться со спамом. Должно быть пустым!</label>
+							<input id="honeypot" type="text" name="honeypot" value="">
+						</fieldset>
+						<button class="last-step-form__button btn-shine contact-form__button" type="submit" onclick="yaCounter82446148.reachGoal('GOOD'); return true;">
 							<!--<img src="images/bx_loader.gif" alt="">-->
 							<span>получить результат расчета</span>
 						</button>
+						<div class="contact-form__description"></div>
 						<div class="last-step-form__accept">Нажимая на кнопку, вы принимаете <a href="privacy.html" target="_blank">Положение и Согласие</a> на обработку персональных данных.</div>
 					</div>
 				</div>
